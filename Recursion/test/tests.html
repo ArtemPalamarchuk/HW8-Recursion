@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- подключаем стили Mocha, для отображения результатов -->
+        <link rel="stylesheet" href="mocha.css">
+        <meta charset="UTF-8">
+        <title>Recursion</title>
+        <!-- подключаем библиотеку Mocha -->
+        <script src="../mocha/mocha.js"></script>
+        <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+        <script>mocha.setup('bdd');</script>
+        <!-- подключаем chai -->
+        <script src="../chai/chai.js"></script>
+        <!-- в chai есть много всего, выносим assert в глобальную область -->
+        <script> var assert = chai.assert;</script>
+    </head>
+    <body>
+        <script>function startTests() {mocha.run();}</script>
+
+        <button id="test" onclick="startTests()">Test Recursion</button>
+        <div id="mocha"></div>
+
+        <script src="../js/init.js"> </script>
+        <script src="test.js"> </script>
+    </body>
+</html>
