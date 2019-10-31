@@ -8,24 +8,43 @@
 	</head>
 	
 	<body>
-	<div class="grid-container">
 
-		<button class="btnCount" id="btnCount" >Counter</button>
-		<div id="countResult" class="grid-item"></div>
-
-		<button class="btnCount" id="recCount" >Rec. Counter</button>
-		<div id="recResult" class="grid-item"></div>
-
-		<button class="btnCount" id="" >Counter</button>
-		<div class="grid-item"></div>
-
-		<button class="btnCount" id="" >Counter</button>
-		<div class="grid-item"></div>
+	<div class="flex-container">
+		<div class="flex-container_div a"><button id="btnCount">Counter</button></div>
+		<div class="flex-container_div" id="countDisplay"></div>
 	</div>
+
+	<div class="flex-container">
+		<div class="flex-container_div a"><button id="factorialCount">Factorial</button></div>
+		<input type="text" placeholder="factorial" class="flex-container_div" id="factorialInput" maxlength="10"/>
+		<div class="flex-container_div" id="factorialDisplay"></div>
+	</div>
+
+	<div class="flex-container">
+		<div class="flex-container_div a"><button id="fibonacciCount">Fibonacci</button></div>
+		<input type="text" placeholder="fibonacci" class="flex-container_div" id="fibonacciInput" maxlength="10"/>
+		<div class="flex-container_div" id="fibonacciDisplay"></div>
+	</div>
+
+	<div class="flex-container">
+		<div class="flex-container_div a"><button id="createArr">Create Array</button></div>
+		<input type="text" placeholder="Кол-во елементов" class="flex-container_div" id="elemsQuantity" maxlength="10" autocomplete="off"/>
+		<input type="text" placeholder="Искомый елемент" class="flex-container_div" id="search" maxlength="10" autocomplete="off"/>
+		<div class="flex-container_div a"><button id="cycleTest">Test by cycle</button></div>
+		<div class="flex-container_div a"><button id="binaryTest">Test by binary</button></div>
+		<div class="flex-container_div" id="testDisplay"></div>
+		<div class="flex-container_div" id="testBinaryDisplay"></div>
+	</div>
+
 	</body>
 
 	<script src="js/init.js"> </script>
-	<script src="test/test.js"> </script>
+	<script src="js/counter.js"> </script>
+	<script src="js/factorial.js"> </script>
+	<script src="js/fibonacci.js"> </script>
+	<script src="js/binarySearch.js"> </script>
+	<script src="js/binaryTree.js"> </script>
+	<!--<script src="test/test.js"> </script>-->
 
 
 

@@ -1,32 +1,97 @@
 body{
     margin: 0;
     padding: 0;
+    background-image: radial-gradient(rgb(255, 255, 255), rgb(239, 240, 246), rgb(224, 224, 236), rgb(208, 209, 227), rgb(192, 194, 218), rgb(177, 179, 209), rgb(161, 163, 199), rgb(146, 148, 190), rgb(130, 133, 181), rgb(114, 118, 172), rgb(99, 102, 162), rgb(83, 87, 153));
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
-.btnCount{
-    font-size: 20px;
-    width: 150px;
-    margin: 0 auto;
-}
-
-.grid-container {
-    max-width: 350px;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: auto auto;
-    background-color: #2196F3;
-    padding: 20px;
-    grid-gap: 20px;
-}
-.grid-item {
+/*--------------------Containers--------------------*/
+.flex-container {
     display: flex;
-    margin: 0 auto;
-    width: 150px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    height: 50px;
-    font-size: 30px;
-    text-align: center;
+    background-color: lightsteelblue;
+    border: 2px solid #002878;
+    max-width: 950px;
+    margin: 35px auto;
+    justify-content: space-between;
+}
+
+.flex-container_div {
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f1f1f1;
+    margin: 10px;
+    font-size: 30px;
+}
+
+.flex-container_div.a{
+    background-color: #2f6fad;
+    padding: 0;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-self: flex-end;
+}
+
+input.flex-container_div{
+    border: none;
+    outline: none;
+    padding:0 10px;
+    width: 120px;
+    text-align: center;
+    font-size: 20px;
+    transition: 0.2s;
+}
+input.flex-container_div:focus{
+    border: 3px solid #002878;
+    height: 44px;
+}
+
+/*--------------------Buttons--------------------*/
+button{
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #6ab1d7 0%, #33d9de 50%, #002878 100%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color:lime;
+    box-shadow: 0 16px 32px 0 rgba(0,40,120,.35);
+    transition: .5s;
+}
+button:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+button:focus{
+    border: none;
+    outline: none;
+}
+
+
+
+/*--------------------Displays--------------------*/
+div#countDisplay,div#fibonacciDisplay{
+    font-size: 28px;
+}
+#factorialDisplay,#countDisplay,#fibonacciDisplay,#testDisplay,#testBinaryDisplay{
+    background-color: lightgreen;
+    min-width: 50px;
+    width: auto;
+    font-size: 17px;
+    text-align: center;
+    padding:0 20px;
+    font-weight: bold;
+}
+
+#elemsQuantity,#search{
+    font-size: 14px;
 }

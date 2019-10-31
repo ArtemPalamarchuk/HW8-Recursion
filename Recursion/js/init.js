@@ -1,88 +1,24 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//
-// });
+/*document.addEventListener("DOMContentLoaded", () => {
 
-function summ(a,b) {
-    return a + b;
-}
+});*/
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let recursiveBtn = document.getElementById("btnCount");
+let recursiveDisplay = document.getElementById("countDisplay");
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let factorialBtn = document.getElementById("factorialCount");
+let factorialDisplay = document.getElementById("factorialDisplay");
+let factorialInput = document.getElementById("factorialInput");
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let fibonacciBtn = document.getElementById("fibonacciCount");
+let fibonacciDisplay = document.getElementById("fibonacciDisplay");
+let fibonacciInput = document.getElementById("fibonacciInput");
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let createArray = document.getElementById("createArr");
+let elQuaInput = document.getElementById("elemsQuantity");
+let searchingElement = document.getElementById("search");
+let testByCycle = document.getElementById("cycleTest");
+let testByBinary = document.getElementById("binaryTest");
+let testCycleDisplay = document.getElementById("testDisplay");
+let testBinaryDisplay = document.getElementById("testBinaryDisplay");
 
-let btnCount = document.getElementById("btnCount");
-let counterDisplay = document.getElementById("countResult");
-counterDisplay.innerHTML= 0;
 
-btnCount.addEventListener("click", function () {
-    counterDisplay.innerHTML++
-});
-
-
-
-let recCount = document.getElementById("recCount");
-let recDisplay = document.getElementById("recResult");
-recDisplay.innerHTML= 0;
-
-recCount.addEventListener("click", function () {
-
-    setInterval(f,10)
-    function f() {
-        recDisplay.innerHTML++;
-    }
-});
-
-//Facorial-------------------------------------------------------
-function factorial(n) {
-    if (n===1){
-        return 1;
-    }else{
-        return  n * factorial(n-1);
-    }
-}
-console.log(factorial(17));
-//---------------------------------------------------------------
-
-//binarySearch---------------------------------------------------
-function createArr(from, to){
-    let str = [];
-    if(from < to){
-        let count = to - from;
-        for(let i = 0; i <= count; i++){
-            str[i] = from;
-            from++;
-        }
-    }
-    else if(to < from) {
-        let count = from - to;
-        for(let i = 0; i <= count; i++){
-            str[i] = to;
-            to++;
-        }
-    }
-    return str;
-}
-
-let str1 = createArr(1,100000);
-let steps = 0;
-let search = 3;
-function  binarySearch(first, last, search) {
-    steps++;
-    let middle = Math.floor((first + last)/2)
-    if(str1[middle] === search){
-        return str1[middle];
-    }
-    if(str1[middle] > search){
-        return binarySearch(first, middle, search);
-    }
-    if(str1[middle] < search) {
-        return binarySearch(middle, last, search);
-    }
-}
-
-console.log(binarySearch(str1[0],str1[str1.length - 1],search,str1));
-console.log(steps + " steps");
-//---------------------------------------------------------------
-//fibonachi---------------------------------------------------
-function fib(n) {
-    return n <= 1 ? n : fib(n - 1) + fib(n - 2);
-}
-
-console.log( fib(11) );
-//---------------------------------------------------------------
