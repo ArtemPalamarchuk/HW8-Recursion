@@ -66,28 +66,4 @@ BinnaryTree.prototype.push = function (el, nextStep)  {
     }
 };
 
-BinnaryTree.prototype.push = function (el, nextStep)  {
-    const noda = new CreateTreeNode(el);
-    let tmpNoda;
-    if(nextStep === undefined){
-        tmpNoda  = this.root;
-    }
-    else {
-        tmpNoda = nextStep
-    }
 
-    if(this.root == null){
-        this.root = noda;
-    }
-    else {
-        if (el >= tmpNoda.data && tmpNoda.right != null) {
-            return this.push(el, tmpNoda.right)
-        } else if (el < tmpNoda.data && tmpNoda.left != null) {
-            return this.push(el, tmpNoda.left)
-        }else if(el >= tmpNoda.data){
-            tmpNoda.right = noda;
-        }else if(el < tmpNoda.data){
-            tmpNoda.left = noda;
-        }
-    }
-};

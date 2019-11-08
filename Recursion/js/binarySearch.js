@@ -1,9 +1,8 @@
-function createArr(quantity) {
+/* function createArr(quantity) {
     let arr = [];
     for (let i = 0; i < quantity; i++){
         arr[i] = i;
     }
-    alert(`Массив от 1 до ${quantity} создан. Введите искомый елемент`);
     return arr;
 }
 let arr1;
@@ -12,7 +11,6 @@ let arr1;
 createArray.addEventListener("click", function () {
     let n = elQuaInput.value;
     arr1 = createArr(n);
-    //console.log(arr1);
 });
 
 
@@ -59,3 +57,4 @@ function  binarySearch(first, last, search, arr) {
 
 
 
+ */
