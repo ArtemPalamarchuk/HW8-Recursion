@@ -22,3 +22,4 @@ let testCycleDisplay = document.getElementById("testDisplay");
 let testBinaryDisplay = document.getElementById("testBinaryDisplay");
 
 
+

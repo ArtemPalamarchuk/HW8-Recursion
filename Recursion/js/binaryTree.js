@@ -12,10 +12,7 @@ class BinaryTreeNode {
 	}
 }
 
-const binaryTree = new BinaryTree();
-const binaryTreeNode = new BinaryTreeNode();
-
-BinnaryTree.prototype.search = function (searchEl , nextStep) {
+BinaryTree.prototype.search = function (searchEl , nextStep) {
 
     let tmpNode;
     if(nextStep == undefined){
@@ -35,13 +32,12 @@ BinnaryTree.prototype.search = function (searchEl , nextStep) {
         return this.search(searchEl, tmpNode.right)
     }
     else{
-
         return searchEl;
     }
 };
 
-BinnaryTree.prototype.push = function (el, nextStep)  {
-    const noda = new CreateTreeNode(el);
+BinaryTree.prototype.push = function (el, nextStep)  {
+    const noda = new BinaryTreeNode(el);
     let tmpNoda;
     if(nextStep === undefined){
         tmpNoda  = this.root;

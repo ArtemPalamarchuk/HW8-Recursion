@@ -1,3 +1,16 @@
+class List{
+	constructor(){
+		this.clear = function () {};
+		this.length = function () {};
+		this.pop = function(){};
+		this.push = function(){};
+		this.shift = function(){};
+		this.unshift = function(){};
+		this.toString = function(){};
+		this.sort = function(){};
+	}
+}
+
 class LinkedList extends List{
 
 	root = {
@@ -119,4 +132,14 @@ class LinkedList extends List{
 			}
 		}
 	};
+	
+	search = (elem) => {
+		let tmp = this.root;
+		while(tmp.next !== null){
+			if(tmp.next.el === elem){
+				return tmp.next.el;
+			}
+			tmp = tmp.next;
+		}
+	}
 }
